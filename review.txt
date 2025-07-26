@@ -1,0 +1,26 @@
+**Code Review: TextProcessing**
+
+**Documentation:**
+The code does a solid job of adding inline comments to explain key sections like file reading and text processing. That’s helpful for navigation.
+However, it could really use a short summary at the top of the file—something that outlines what the program does and how to use it. That context goes a long way for new readers or future maintainers.
+
+**Error Handling:**
+Good job checking if the file exists before attempting to read it. That proactive validation helps avoid common user mistakes.
+That said, the code doesn’t account for other potential issues like file access permissions or IO errors. Wrapping the file read in a try-catch block would make the program more robust.
+
+**Naming and Structure:**
+Variable naming is clear and descriptive—`filePath`, `lines`, `wordCounts`, and `cleanedLine` all communicate their purpose well.
+One downside: everything is still jammed into the `Main` method. Splitting the logic into smaller helper methods would improve modularity and make the code easier to read and maintain.
+
+**Object-Oriented Design:**
+Right now, the code isn’t really taking advantage of OOP. Encapsulating the word processing logic into its own class (or at least a set of static helper methods) would clean things up and pave the way for future enhancements.
+
+**Program Logic and Output:**
+Output is tidy, informative, and alphabetically sorted—which makes it easy to follow. Including a total count of unique words is a nice touch, and the labels are clear. Nothing confusing here.
+
+**Suggestions:**
+
+* Include a brief program summary at the top to explain its purpose and how it works.
+* Add broader exception handling to cover unexpected file access errors.
+* Break up the logic in `Main` by moving responsibilities into separate methods or a class.
+* Keep up the good naming conventions and clean output style—it’s working well.
